@@ -1,4 +1,4 @@
-    GetThemeFile('Base');    
+    GetThemeFile('PurpleTheme');    
 
     function UpdatethemeFile(themeFile){        
         setProp('--background-default', themeFile.Header.backgroundColor) // Backgorund color of the chatlist and some other things
@@ -72,8 +72,8 @@
         setProp('--bubble-meta', themeFile.Chat.messageTime); // Message time
     
         // Visualized indicator
-        setProp('--icon-ack', themeFile.Chat.checkmarkVizualised); // visualized checkmark
-        setProp('--bubble-meta-icon', themeFile.Chat.checkmarkNotVizualised); // 1 and 2 checkmarks not visualized
+        setProp('--icon-ack', themeFile.Chat.checkmarkVisualized); // visualized checkmark
+        setProp('--bubble-meta-icon', themeFile.Chat.checkmarkNotVisualized); // 1 and 2 checkmarks not visualized
     
         // Message input
         setProp('--compose-background', themeFile.Chat.input.compose) // Basicaly the background of message input
