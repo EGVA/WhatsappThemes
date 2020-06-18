@@ -1,205 +1,103 @@
-     function Theme ( 
-        unreadMessageCounterBackground_,
-        unreadMessageCounterText_,
-        mainBackgroundColour_,
-        mainBackgroundColourHover_,
-        mainBackgroundColourLighter_,
-    
-        dropdownBackground_,
-        dropdownBackgroundHover_,
-    
-        mainFont_,
-        lightMainFont_,
-       
-        introBackground_,
-       
-        headerColour_,
-        headerIcons_,
-        avatarOutlines_,
-       
-        icons_,
-       
-        confgMenuBackground_,
-        confgMenuHeader_,
-    
-        butterbarBackground_,
-        butterBarIcon_,
-        butterBarFont_,
-       
-        outgoingMessageBackground_,
-        outgoingMessageBackgroundDeeper_,
-        incomingMessageBackground_,
-        incomingMessageBackgroundDeeper_,
-        audioProgress_,
-        audioProgressWhilePlayed_,
-        playbackIcons_,
-        microphone_,
-        messageTime_,
-        dayIndicatorBackground_,
-        dayIndicatorText_,
-       
-        visualizedCheckmark_,
-        notVisealizedCheckmark_,
-       
-        inputFieldBackground_,
-        inputPlaceholder_,
-        inputBackground_,
-        inputBackgroundDeep_
-        )
-        {
-            this.unreadMessageCounterBackground = unreadMessageCounterBackground_
-            this.unreadMessageCounterText = unreadMessageCounterText_
+    GetThemeFile('Base');    
+
+    function UpdatethemeFile(themeFile){        
+        setProp('--background-default', themeFile.Header.backgroundColor) // Backgorund color of the chatlist and some other things
+        setProp('--background-default-active', themeFile.Header.backgroundColorHover) //  Backgorund color of the chatlist and some other things while selected
+        setProp('--background-default-hover', themeFile.Header.backgroundColorActive) //  Backgorund color of the chatlist and some other things while hover
+        setProp('--panel-background-lighter', themeFile.Header.backgroundColorLighter) //  Backgorund color of the chatlist and some other things but lighter
         
-            this.mainBackgroundColour = mainBackgroundColour_
-            this.mainBackgroundColourHover = mainBackgroundColourHover_
-            this.mainBackgroundColourLighter = mainBackgroundColourLighter_
-            this.unreadMessageCounterText = unreadMessageCounterText_
-
-            this.dropdownBackground = dropdownBackground_
-            this.dropdownBackgroundHover = dropdownBackgroundHover_
-            this.butterbarBackground = butterbarBackground_
-            this.butterBarFont = butterBarFont_
-            this.microphone = microphone_
-        
-             this.mainFont = mainFont_
-             this.lightMainFont = lightMainFont_
-            
-             this.introBackground = introBackground_
-            
-             this.headerColour = headerColour_
-             this.headerIcons = headerIcons_
-             this.avatarOutlines = avatarOutlines_
-            
-             this.icons = icons_
-            
-             this.confgMenuBackground = confgMenuBackground_
-             this.confgMenuHeader = confgMenuHeader_
-            
-             this.outgoingMessageBackground = outgoingMessageBackground_
-             this.outgoingMessageBackgroundDeeper = outgoingMessageBackgroundDeeper_
-             this.incomingMessageBackground = incomingMessageBackground_
-             this.incomingMessageBackgroundDeeper = incomingMessageBackgroundDeeper_
-             this.audioProgress = audioProgress_
-             this.audioProgressWhilePlayed = audioProgressWhilePlayed_
-             this.playbackIcons = playbackIcons_
-             this.messageTime = messageTime_
-             this.dayIndicatorBackground = dayIndicatorBackground_
-             this.dayIndicatorText = dayIndicatorText_
-            
-             this.visualizedCheckmark = visualizedCheckmark_
-             this.notVisealizedCheckmark = notVisealizedCheckmark_
-            
-             this.inputFieldBackground = inputFieldBackground_
-             this.inputPlaceholder = inputPlaceholder_
-             this.inputBackground = inputBackground_
-             this.inputBackgroundDeep = inputBackgroundDeep_
-    }
-
-    GetThemeFile('Teste');    
-
-    function UpdateTheme(theme){
-        setProp('--unread-marker-background', theme.unreadMessageCounterBackground) // The unread message counter background
-        setProp('--unread-marker-text', theme.unreadMessageCounterText) // The unread message counter font
-
-        setProp('--background-default', theme.mainBackgroundColour) // Backgorund color of the chatlist and some other things
-        setProp('--background-default-active', theme.mainBackgroundColourHover) //  Backgorund color of the chatlist and some other things while hover
-        setProp('--panel-background-lighter', theme.mainBackgroundColourLighter) //  Backgorund color of the chatlist and some other things but lighter
+        setProp('--dropdown-background', themeFile.Global.dropdownsBackground) // Dropdown menus background
+        setProp('--dropdown-background-hover', themeFile.Global.dropdownsBackgroundHover) // Dropdown menus background
     
         //#region fonts
-        setProp('--primary-title', theme.mainFont)
-        setProp('--primary-strong', theme.mainFont)
-        setProp('--primary-stronger', theme.mainFont)
-        setProp('--secondary-stronger', theme.mainFont)
-        setProp('--secondary', theme.mainFont)
-        setProp('--primary', theme.mainFont)
+        setProp('--primary-title', themeFile.Global.Fonts.primaryTitle)
+        setProp('--primary-strong', themeFile.Global.Fonts.primaryStrong)
+        setProp('--primary-stronger', themeFile.Global.Fonts.primaryStronger)
+        setProp('--secondary-stronger', themeFile.Global.Fonts.secondary)
+        setProp('--secondary', themeFile.Global.Fonts.secondaryStrong)
+        setProp('--primary', themeFile.Global.Fonts.secondaryStronger)
         ////#endregion fonts
     
         //#region intro
-        setProp('--intro-background', theme.introBackground)
+        setProp('--intro-background', themeFile.Intro.background)
         //#endregion
     
         //#region header
-        setProp('--panel-header-background', theme.headerColour) // Header background color 
-        setProp('--panel-header-icon', theme.headerIcons) // The icons of the header
-        setProp('--avatar-background', theme.avatarOutlines) // THe outline of every avatar
+        setProp('--panel-header-background', themeFile.Menus.panelBackground) // Header background color 
+        setProp('--panel-header-icon', themeFile.Menus.icons) // The icons of the header
         //#endregion
     
         //#region Chatlist
-        setProp('--icon-lighter', theme.icons) // Mute icon
-        setProp('--secondary-lighter', theme.lightMainFont) 
-        setProp('--chatlist-icon', theme.icons) // Some preview message icons
-        setProp('--dropdown-background', theme.dropdownBackground) // Dropdown menus background
-        setProp('--dropdown-background-hover', theme.dropdownBackgroundHover) // Dropdown menus background
+        setProp('--icon-lighter', themeFile.Chatlist.icons) // Mute icon
+        setProp('--secondary-lighter', themeFile.Chatlist.Fonts.secondaryLighter) 
+        setProp('--chatlist-icon', themeFile.Chatlist.icons) // Some preview message icons
+        setProp('--unread-marker-background', themeFile.Chatlist.unreadMessageCounterBackground) // The unread message counter background
+        setProp('--unread-marker-text', themeFile.Chatlist.unreadMessageCounterText) // The unread message counter font
     
         //#region Butter bar
-        setProp('--butterbar-default-background', theme.butterbarBackground)
-        setProp('--butterbar-primary', theme.butterBarFont)
-        setProp('--butterbar-secondary', theme.butterBarFont)
-        setProp('--butterbar-icon', theme.icons)
+        setProp('--butterbar-default-background', themeFile.Chatlist.butterbar.background)
+        setProp('--butterbar-primary', themeFile.Chatlist.butterbar.primary)
+        setProp('--butterbar-secondary', themeFile.Chatlist.butterbar.secondary)
+        setProp('--butterbar-icon', themeFile.Chatlist.butterbar.icons)
         //#endregion   
         //#endregion
     
         //#region 
-        setProp('--panel-background-colored', theme.dropdownBackground) // Color of top header when open a configuration menu
-        setProp('--drawer-background', theme.dropdownBackground) // The background of the menu citted in above commentary
-        setProp('--drawer-section-background', theme.dropdownBackground) // The background of the menu citted in above commentary
+        setProp('--panel-background-colored', themeFile.Menus.panelBackground) // Color of top header inside a configuration menu
+        setProp('--drawer-background', themeFile.Menus.drawerBackground) // The background of the menu citted in above commentary
+        setProp('--drawer-section-background', themeFile.Menus.drawerSection) // The secondary background of the menu citted in above commentary
         ////#endregion
     
         //#region Chat
-        setProp('--outgoing-background', theme.outgoingMessageBackground); // Message background
-        setProp('--outgoing-background-deeper', theme.outgoingMessageBackgroundDeeper); // The reply background
-        setProp('--outgoing-background-rgb', '#DC5447'); // IDK
-        setProp('--outgoing-primary', '#fdf4cb'); // IDK
+        setProp('--outgoing-background', themeFile.Chat.outgoing.messageBackground); // Message background
+        setProp('--outgoing-background-deeper', themeFile.Chat.outgoing.messageDeeper); // The reply background
+        setProp('--outgoing-background-rgb', themeFile.Chat.outgoing.messageRGB); // IDK
+        setProp('--outgoing-primary', themeFile.Chat.outgoing.font); // Font
     
-        setProp('--incoming-background', theme.incomingMessageBackground);  // Message background
-        setProp('--incoming-background-deeper', theme.incomingMessageBackgroundDeeper); // A deeper background colour
-        setProp('--incoming-background-rgb', '#DC5447'); // IDK
-        setProp('--incoming-primary', '#fdf4cb'); // IDK
-    
-        setProp('--audio-progress-played', theme.audioProgress); // Audio progress icon indicator
-        setProp('--audio-progress-played-incoming', theme.audioProgressWhilePlayed); // Audio progress icon indicator while playing
-    
-        setProp('--icon-strong-rgb', theme.playbackIcons); // Playback icon
-        setProp('--ptt-green', theme.microphone); // Microfone icon
+        setProp('--incoming-background', themeFile.Chat.incoming.messageBackground);  // Message background
+        setProp('--incoming-background-deeper', themeFile.Chat.incoming.messageDeeper); // A deeper background colour
+        setProp('--incoming-background-rgb', themeFile.Chat.incoming.messageRGB); // IDK
+        setProp('--incoming-primary', themeFile.Chat.incoming.font); // Font
         
-        setProp('--system-message-background', theme.dayIndicatorBackground); // The day of message indicator background
-        setProp('--system-message-text', theme.dayIndicatorText); // The day of message indicator text
     
-        setProp('--bubble-meta', theme.messageTime); // Message time
+        setProp('--audio-progress-played', themeFile.Chat.audioProgressIndicator); // Audio progress icon indicator
+        setProp('--audio-progress-played-incoming', themeFile.Chat.audioProgressIndicatorWhileAudioPlaying); // Audio progress icon indicator while playing
+    
+        setProp('--icon-strong-rgb', themeFile.Chat.playbackButtons); // Playback icon
+        setProp('--ptt-green', themeFile.Chat.icons); // Microfone icon
+        
+        setProp('--system-message-background', themeFile.Chat.dayIndicatorBackground); // The day of message indicator background
+        setProp('--system-message-text', themeFile.Chat.dayIndicatorText); // The day of message indicator text
+    
+        setProp('--bubble-meta', themeFile.Chat.messageTime); // Message time
     
         // Visualized indicator
-        setProp('--icon-ack', theme.visualizedCheckmark); // visualized checkmark
-        setProp('--bubble-meta-icon', theme.notVisealizedCheckmark); // 1 and 2 checkmarks not visualized
+        setProp('--icon-ack', themeFile.Chat.checkmarkVizualised); // visualized checkmark
+        setProp('--bubble-meta-icon', themeFile.Chat.checkmarkNotVizualised); // 1 and 2 checkmarks not visualized
     
         // Message input
-        setProp('--compose-background', '#80D1B2') // Basicaly the background of message input
-        setProp('--input-placeholder', theme.inputPlaceholder) // Basicaly the colour of placeholder from input
+        setProp('--compose-background', themeFile.Chat.input.compose) // Basicaly the background of message input
+        setProp('--input-placeholder', themeFile.Chat.input.placeholder) // Basicaly the colour of placeholder from input
     
-        setProp('--rich-text-panel-background', theme.inputBackground); // The background of the divs who input is
-        setProp('--panel-background-deep', theme.inputBackgroundDeep); // The colour behing of input placeholder
+        setProp('--rich-text-panel-background', themeFile.Chat.input.richTextPanelBackground); // The background of the divs who input is
+        setProp('--panel-background-deep', themeFile.Chat.input.backgroundDeep); // The colour behind of input placeholder
+        setProp('--panel-background-deeper', themeFile.Chat.input.backgroundDeep); // The colour behind of input placeholder while sharing files/imgs
     
-        setProp('--icon', theme.icons); // Downpart icons
+        setProp('--icon', themeFile.Chat.icons); // Downpart icons
     
-        setProp('--icon-fixed', theme.icons) // Icons from menus
-        setProp('--panel-primary', 'blue'); // IDK
+        setProp('--icon-fixed', themeFile.Menus.icons) // Icons from menus
+        setProp('--panel-primary', themeFile.Menus.primary); // IDK 
         //#endregion
     }
 
-     function GetThemeFile(themeName){
-        const url = chrome.runtime.getURL('../Themes/' + themeName + '.json');
-        let jjson;
+     function GetThemeFile(themeFileName){
+        const url = chrome.runtime.getURL('../Themes/' + themeFileName + '.json');
         fetch(url)
             .then((response) => response.json()) //assuming file contains json
-            .then((json) => UpdateTheme(json));
+            .then((json) => UpdatethemeFile(json));
     
-    }
-    
-    //#region  UTIL FUNCTIONS 
-    function getQ(value){
-        return document.querySelector(value);
-    }
-    function setProp(variable ,value){
-        getQ(':root').style.setProperty(variable,value);
     }
 
-    //#endregion
+    function setProp(variable ,value){
+        document.querySelector(":root").style.setProperty(variable,value);
+    }

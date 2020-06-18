@@ -1,31 +1,76 @@
 {
-    "unreadMessageCounterBackground":   "",
-    "unreadMessageCounterText":         "",
-    "mainBackgroundColour":             "",
-    "mainBackgroundColourHover":        "",
-    "mainBackgroundColourLighter":      "",
-    "mainFont":                         "",
-    "introBackground":                  "",
-    "headerColour":                     "",
-    "headerIcons":                      "",
-    "avatarOutlines":                   "",
-    "icons":                            "",
-    "confgMenuBackground":              "",
-    "confgMenuHeader":                  "",
-    "outgoingMessageBackground":        "",
-    "outgoingMessageBackgroundDeeper":  "",
-    "incomingMessageBackground":        "",
-    "incomingMessageBackgroundDeeper":  "",
-    "audioProgress":                    "",
-    "audioProgressWhilePlayed":         "",
-    "playbackIcons":                    "",
-    "messageTime":                      "",
-    "dayIndicatorBackground":           "",
-    "dayIndicatorText":                 "",
-    "visualizedCheckmark":              "",
-    "notVisealizedCheckmark":           "",
-    "inputFieldBackground":             "",
-    "inputPlaceholder":                 "",
-    "inputBackground":                  "",
-    "inputBackgroundDeep":              ""
-}
+    "Global": {
+            "dropdownsBackground": "#ffffff",
+            "dropdownsText": "#ffffff",
+            "dropdownsBackgroundHover": "#ffffff",
+            "Fonts": {
+                "primaryTitle": "#ffffff",
+                "primaryStrong": "#ffffff",
+                "primaryStronger": "#ffffff",
+                "secondary": "#ffffff",
+                "secondaryStrong": "#ffffff",
+                "secondaryStronger": "#ffffff"
+            }
+        },
+    "Intro": {
+            "background": "red"
+        },
+     "Header": {
+         "backgroundColor": "#ffffff",
+         "backgroundColorHover": "#ffffff",
+         "backgroundColorActive": "#ffffff",
+         "backgroundColorLighter": "#ffffff",
+         "icon": "#ffffff"
+     },
+     "Chatlist": {
+         "butterbar": {
+            "background": "#ffffff",
+            "primary": "#ffffff",
+            "secondary": "#ffffff",
+            "icons": "#ffffff"
+         },
+         "Fonts": {
+             "secondaryLighter": "#ffff"
+         },
+        "unreadMessageCounterBackground": "#ffffff",
+        "unreadMessageCounterText":       "#ffffff",
+        "icons": "#ffffff"
+     },
+     "Menus": {
+         "panelBackground": "#ffffff",
+         "drawerBackground": "#ffffff",
+         "drawerSection": "#ffffff",
+         "icons": "#ffffff",
+         "primary": "#fffff"
+     },
+     "Chat": {
+         "outgoing":{
+             "messageBackground": "#ffffff",
+             "messageDeeper": "#ffffff",
+             "messageRGB": "#ffffff",
+             "font": "#ffffff"
+         },
+         "incoming":{
+            "messageBackground": "#ffffff",
+            "messageDeeper": "#ffffff",
+            "messageRGB": "#ffffff",
+            "font": "#ffffff"
+        },
+        "input":{
+            "icons": "#ffffff",
+            "placeholder": "#ffffff",
+            "compose": "#ffffff",
+            "richTextPanelBackground": "#ffffff",
+            "backgroundDeep": "#ffffff"
+        },
+        "icons": "#ffffff",
+        "messageTime": "#fffff",
+        "playbackButtons": "#ffffff",
+        "audioProgressIndicator": "#ffffff",
+        "audioProgressIndicatorWhileAudioPlaying": "#ffffff",
+        "dayIndicatorBackground": "#ffffff",
+        "dayIndicatorText": "#ffffff",
+        "checkmarkNotVizualised": "#ffffff",
+        "checkmarkVisualized": "#ffffff"
+     }
+    }
