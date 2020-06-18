@@ -1,6 +1,10 @@
-    GetThemeFile('PurpleTheme');    
+    if(localStorage.getItem('LastThemeUsed') != null)
+        GetThemeFile(localStorage.getItem('LastThemeUsed'));    
+    else
+        GetThemeFile(localStorage.getItem('PurpleTheme'));    
+        
 
-    function UpdatethemeFile(themeFile){        
+    function UpdatethemeFile(themeFile){          
         setProp('--background-default', themeFile.Header.backgroundColor) // Backgorund color of the chatlist and some other things
         setProp('--background-default-active', themeFile.Header.backgroundColorHover) //  Backgorund color of the chatlist and some other things while selected
         setProp('--background-default-hover', themeFile.Header.backgroundColorActive) //  Backgorund color of the chatlist and some other things while hover
@@ -91,6 +95,7 @@
     }
 
      function GetThemeFile(themeFileName){
+        localStorage.setItem('LastThemeUsed', themeFileName);
         const url = chrome.runtime.getURL('../Themes/' + themeFileName + '.json');
         fetch(url)
             .then((response) => response.json()) //assuming file contains json
@@ -101,3 +106,11 @@
     function setProp(variable ,value){
         document.querySelector(":root").style.setProperty(variable,value);
     }
+
+    chrome.runtime.onMessage.addListener(
+        function(request, sender, sendResponse) {
+          console.log(request.themeResponse);
+          GetThemeFile(request.themeResponse);
+          if (request.themeResponse != null)
+            sendResponse({farewell: "goodbye"});
+    });

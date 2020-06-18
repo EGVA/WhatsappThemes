@@ -1,23 +1,52 @@
-import {Theme} from '../Page/content.js'
+GetThemeFile('ThemesRegister');    
 
-//new Theme('','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','')
+var themeToLoad = "dev";
 
-const url = chrome.runtime.getURL('../Themes/Teste.json');
+var DevButton = document.querySelector("#Dev");
+var userButton = document.querySelector("#User");
 
-fetch(url)
-    .then((response) => response.json()) //assuming file contains json
-    .then((json) => console.log(json));
+Dev.addEventListener('click', () => {
+    GetThemeFile("ThemesRegister")
+    themeToLoad = "dev"
+})
+User.addEventListener('click', () => { 
+    GetThemeFile("ThemesRegister")
+    themeToLoad = "user"
+})
 
-let theme = new Theme('a','b','c','d','e','f','e','f','g','g','g','g','g','g','g','g','g','g','g','g','g','g','g','g','g','g','g','g','g','g','g','g','g','g','g')
-
-localStorage.setItem('TEMATESTE', theme)
-
-export function GetThemeFile(themeName){
-    const url = chrome.runtime.getURL('../Themes/' + themeName + '.js');
-    let jjson;
+function GetThemeFile(themeFileName){
+    const url = chrome.runtime.getURL('../Themes/' + themeFileName + '.json');
     fetch(url)
         .then((response) => response.json()) //assuming file contains json
-        .then((json) => jjson = json);
+        .then((json) => LoadRegister(json))
+}
 
-        return jjson;
+function LoadRegister(registerFile){
+    let div = document.getElementById("Themes");
+    let themesType;
+
+    if(themeToLoad == "dev")
+        themesType = registerFile.DevThemes
+    else if (themeToLoad == "user")
+        themesType = registerFile.UserThemes
+
+    div.innerHTML = "";
+
+    themesType.forEach((element) => {
+        var button = document.createElement("button");
+        var node = document.createTextNode(element);
+        button.appendChild(node);
+
+        div.appendChild(button);
+        button.addEventListener('click', function(){RequirePageThemeSwitch(element)});
+    });
+}
+
+function RequirePageThemeSwitch(theme){
+    
+    chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+        chrome.tabs.sendMessage(tabs[0].id, {themeResponse: theme}, function(response) {
+          console.log(response.farewell);
+        });
+      });
 }
