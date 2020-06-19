@@ -65,6 +65,7 @@
             "richTextPanelBackground": "#66a1ff",
             "backgroundDeep": "#1a71ff"
         },
+        "link": "",
         "icons": "#191919",
         "messageTime": "#191919",
         "playbackButtons": "black",

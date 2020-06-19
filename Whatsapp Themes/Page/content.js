@@ -54,6 +54,7 @@
         ////#endregion
     
         //#region Chat
+        setProp('--link', themeFile.Chat.link);
         setProp('--outgoing-background', themeFile.Chat.outgoing.messageBackground); // Message background
         setProp('--outgoing-background-deeper', themeFile.Chat.outgoing.messageDeeper); // The reply background
         setProp('--outgoing-background-rgb', themeFile.Chat.outgoing.messageRGB); // IDK

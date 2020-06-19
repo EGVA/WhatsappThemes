@@ -62,10 +62,11 @@
     "text":"white",
     "icons": "white",
     "placeholder": "#CCC9DC",
-    "compose": "#0C1821",
-    "richTextPanelBackground": "#0C1821",
+    "compose": "#264653",
+    "richTextPanelBackground": "#264653",
     "backgroundDeep": "#324A5F"
 },
+"link": "",
 "icons": "black",
 "messageTime": "white",
 "playbackButtons": "black",

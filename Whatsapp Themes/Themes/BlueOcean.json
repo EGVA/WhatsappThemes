@@ -1,0 +1,80 @@
+{
+    "Global": {
+        "dropdownsBackground": "#3F88C5",
+        "dropdownsText": "white",
+        "dropdownsBackgroundHover": "#499EE6",
+        "backgroundColorHover": "#499EE6",
+        "backgroundColorActive": "#499EE6",
+        "Fonts": {
+            "primaryTitle": "white",
+            "primaryStrong": "white",
+            "primaryStronger": "white",
+            "secondary": "white",
+            "secondaryStrong": "white",
+            "secondaryStronger": "white"
+        }
+    },
+    "Intro": {
+        "background": "white"
+    },
+    "Header": {
+     "backgroundColor": "#3F88C5",
+     "backgroundColorLighter": "#F23D4A",
+     "icon": "white"
+    },
+    "Chatlist": {
+     "butterbar": {
+        "background": "#499EE6",
+        "primary": "black",
+        "secondary": "black",
+        "icons": "black"
+     },
+     "Fonts": {
+         "secondaryLighter": "white"
+     },
+    "searchBackground": "white",
+    "backgroundColor": "#3F88C5",
+    "unreadMessageCounterBackground": "#A1FF8E",
+    "unreadMessageCounterText":       "black",
+    "icons": "white"
+    },
+    "Menus": {
+     "panelBackground": "#3F88C5",
+     "drawerBackground": "#499EE6",
+     "drawerSection": "#499EE6",
+     "icons": "white",
+     "primary": "white"
+    },
+    "Chat": {
+     "outgoing":{
+         "messageBackground": "#E63946",
+         "messageDeeper": "#C4313C",
+         "messageRGB": "#ffffff"
+         
+     },
+     "incoming":{
+        "messageBackground": "#3F88C5",
+        "messageDeeper": "#316A99",
+        "messageRGB": "#ffffff"
+    },
+    "font": "white",
+    "input":{
+        "text":"black",
+        "icons": "white",
+        "placeholder": "black",
+        "compose": "white",
+        "richTextPanelBackground": "#3F88C5",
+        "backgroundDeep": "white"
+    },
+    "link": "black",
+    "icons": "white",
+    "messageTime": "white",
+    "playbackButtons": "black",
+    "audioProgressIndicator": "#191919",
+    "audioProgressIndicatorWhileAudioPlaying": "#191919",
+    "dayIndicatorBackground": "#3F88C5",
+    "dayIndicatorText": "white",
+    "checkmarkNotVizualised": "white",
+    "checkmarkVisualized": "#9BC53D"
+    }
+    }

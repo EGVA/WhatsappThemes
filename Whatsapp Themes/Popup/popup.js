@@ -1,18 +1,6 @@
-GetThemeFile('ThemesRegister');    
+GetThemeFile('ThemesRegister'); 
 
-var themeToLoad = "dev";
-
-var DevButton = document.querySelector("#Dev");
-var userButton = document.querySelector("#User");
-
-Dev.addEventListener('click', () => {
-    GetThemeFile("ThemesRegister")
-    themeToLoad = "dev"
-})
-User.addEventListener('click', () => { 
-    GetThemeFile("ThemesRegister")
-    themeToLoad = "user"
-})
+let themeDiv = document.getElementById("Themes");
 
 function GetThemeFile(themeFileName){
     const url = chrome.runtime.getURL('../Themes/' + themeFileName + '.json');
@@ -22,22 +10,21 @@ function GetThemeFile(themeFileName){
 }
 
 function LoadRegister(registerFile){
-    let div = document.getElementById("Themes");
     let themesType;
 
-    if(themeToLoad == "dev")
-        themesType = registerFile.DevThemes
-    else if (themeToLoad == "user")
-        themesType = registerFile.UserThemes
+    themesType = registerFile.DevThemes
 
-    div.innerHTML = "";
+    var title = document.createElement("h2");
+    var text = document.createTextNode("Themes");
+    title.appendChild(text);
+    themeDiv.appendChild(title);
 
     themesType.forEach((element) => {
         var button = document.createElement("button");
         var node = document.createTextNode(element);
         button.appendChild(node);
 
-        div.appendChild(button);
+        themeDiv.appendChild(button);
         button.addEventListener('click', function(){RequirePageThemeSwitch(element)});
     });
 }

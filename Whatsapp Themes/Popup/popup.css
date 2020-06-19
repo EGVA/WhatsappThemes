@@ -7,35 +7,48 @@ body{
 
 h1
 {
+    margin: 10px 0px 10px 0px;
     font-family: 'Quicksand', sans-serif;   
     font-weight: 500;
 
     cursor: context-menu;
 }
 
+h2
+{
+    margin: 10px 0px 10px 0px;
+    font-family: 'Quicksand', sans-serif;   
+
+    cursor: context-menu;
+}
+
 button{
     font-family: 'Roboto', sans-serif;
-    border-radius: 5px;
-    border-color: transparent;
     margin: 5px 30px 5px 30px;
 
     cursor: pointer;
 
-    transition: 1s;
+    color: white;
+
+    background-color: #2ea44f;
+    border-color: rgba(27,31,35,.15);
+    border: 1px solid;
+    border-radius: 6px;
+
+    transition: 0.25s;
 }
-button:hover
-{
-    background-color: lightblue;
+button:hover{
+    background-color: #278b44;
 }
 
 #Themes{
-    margin-top: 10px;
-
     width: auto;
     height: auto;
 }
 
 .Card{
+    padding: 10px 0px 10px 0px;
+    margin: 10px 0px 10px 0px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap ;
