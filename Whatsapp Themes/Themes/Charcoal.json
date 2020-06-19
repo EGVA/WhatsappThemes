@@ -1,0 +1,79 @@
+{
+"Global": {
+    "dropdownsBackground": "#1B2A41",
+    "dropdownsText": "white",
+    "dropdownsBackgroundHover": "#324A5F",
+    "backgroundColorHover": "#38536B",
+    "backgroundColorActive": "#38536B",
+    "Fonts": {
+        "primaryTitle": "white",
+        "primaryStrong": "white",
+        "primaryStronger": "white",
+        "secondary": "white",
+        "secondaryStrong": "white",
+        "secondaryStronger": "white"
+    }
+},
+"Intro": {
+    "background": "white"
+},
+"Header": {
+ "backgroundColor": "#1B2A41",
+ "backgroundColorLighter": "#324A5F",
+ "icon": "white"
+},
+"Chatlist": {
+ "butterbar": {
+    "background": "#324A5F",
+    "primary": "white",
+    "secondary": "white",
+    "icons": "white"
+ },
+ "Fonts": {
+     "secondaryLighter": "white"
+ },
+"searchBackground": "white",
+"backgroundColor": "#324A5F",
+"unreadMessageCounterBackground": "#A1FF8E",
+"unreadMessageCounterText":       "black",
+"icons": "white"
+},
+"Menus": {
+ "panelBackground": "#0C1821",
+ "drawerBackground": "#1B2A41",
+ "drawerSection": "#1B2A41",
+ "icons": "white",
+ "primary": "white"
+},
+"Chat": {
+ "outgoing":{
+     "messageBackground": "#0C1821",
+     "messageDeeper": "#1B2A41",
+     "messageRGB": "#ffffff"
+     
+ },
+ "incoming":{
+    "messageBackground": "#31495E",
+    "messageDeeper": "#1B2A41",
+    "messageRGB": "#ffffff"
+},
+"font": "white",
+"input":{
+    "text":"white",
+    "icons": "white",
+    "placeholder": "#CCC9DC",
+    "compose": "#0C1821",
+    "richTextPanelBackground": "#0C1821",
+    "backgroundDeep": "#324A5F"
+},
+"icons": "black",
+"messageTime": "white",
+"playbackButtons": "black",
+"audioProgressIndicator": "#191919",
+"audioProgressIndicatorWhileAudioPlaying": "#191919",
+"dayIndicatorBackground": "#0C1821",
+"dayIndicatorText": "white",
+"checkmarkNotVizualised": "white",
+"checkmarkVisualized": "#745CFF"
+}
+}

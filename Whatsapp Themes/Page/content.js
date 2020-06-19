@@ -1,7 +1,7 @@
     if(localStorage.getItem('LastThemeUsed') != null)
         GetThemeFile(localStorage.getItem('LastThemeUsed'));    
     else
-        GetThemeFile(localStorage.getItem('PurpleTheme'));    
+        GetThemeFile(localStorage.getItem('Charcoal'));    
         
 
     function UpdatethemeFile(themeFile){          
@@ -17,9 +17,9 @@
         setProp('--primary-title', themeFile.Global.Fonts.primaryTitle)
         setProp('--primary-strong', themeFile.Global.Fonts.primaryStrong)
         setProp('--primary-stronger', themeFile.Global.Fonts.primaryStronger)
-        setProp('--secondary-stronger', themeFile.Global.Fonts.secondary)
-        setProp('--secondary', themeFile.Global.Fonts.secondaryStrong)
-        setProp('--primary', themeFile.Global.Fonts.secondaryStronger)
+        setProp('--secondary-stronger', themeFile.Global.Fonts.secondaryStrong)
+        setProp('--secondary', themeFile.Global.Fonts.secondary)
+        setProp('--primary', themeFile.Global.Fonts.primaryTitle)
         ////#endregion fonts
     
         //#region intro
@@ -81,6 +81,7 @@
     
         // Message input
         setProp('--compose-background', themeFile.Chat.input.compose) // Basicaly the background of message input
+        setProp('--compose-primary', themeFile.Chat.input.text) // The inputed text color
         setProp('--input-placeholder', themeFile.Chat.input.placeholder) // Basicaly the colour of placeholder from input
     
         setProp('--rich-text-panel-background', themeFile.Chat.input.richTextPanelBackground); // The background of the divs who input is
