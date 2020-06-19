@@ -1,0 +1,80 @@
+{
+    "Global": {
+        "dropdownsBackground": "",
+        "dropdownsText": "",
+        "dropdownsBackgroundHover": "",
+        "backgroundColorHover": "",
+        "backgroundColorActive": "",
+        "Fonts": {
+            "primaryTitle": "",
+            "primaryStrong": "",
+            "primaryStronger": "",
+            "secondary": "",
+            "secondaryStrong": "",
+            "secondaryStronger": ""
+        }
+    },
+    "Intro": {
+        "background": ""
+    },
+    "Header": {
+     "backgroundColor": "",
+     "backgroundColorLighter": "",
+     "icon": ""
+    },
+    "Chatlist": {
+     "butterbar": {
+        "background": "",
+        "primary": "",
+        "secondary": "",
+        "icons": ""
+     },
+     "Fonts": {
+         "secondaryLighter": ""
+     },
+    "searchBackground": "",
+    "backgroundColor": "",
+    "unreadMessageCounterBackground": "",
+    "unreadMessageCounterText":       "",
+    "icons": ""
+    },
+    "Menus": {
+     "panelBackground": "",
+     "drawerBackground": "",
+     "drawerSection": "",
+     "icons": "",
+     "primary": ""
+    },
+    "Chat": {
+     "outgoing":{
+         "messageBackground": "",
+         "messageDeeper": "",
+         "messageRGB": ""
+         
+     },
+     "incoming":{
+        "messageBackground": "",
+        "messageDeeper": "",
+        "messageRGB": ""
+    },
+    "font": "",
+    "input":{
+        "text":"",
+        "icons": "",
+        "placeholder": "",
+        "compose": "",
+        "richTextPanelBackground": "",
+        "backgroundDeep": ""
+    },
+    "link": "",
+    "icons": "",
+    "messageTime": "",
+    "playbackButtons": "",
+    "audioProgressIndicator": "",
+    "audioProgressIndicatorWhileAudioPlaying": "",
+    "dayIndicatorBackground": "",
+    "dayIndicatorText": "",
+    "checkmarkNotVizualised": "",
+    "checkmarkVisualized": ""
+    }
+    }
