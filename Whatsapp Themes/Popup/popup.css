@@ -2,14 +2,30 @@ body{
     width: max-content;
     max-width: 600px;
     text-align: center;
+    background-color: #faf9f9;
+}
+
+h1
+{
+    font-family: 'Quicksand', sans-serif;   
+    font-weight: 500;
+
+    cursor: context-menu;
 }
 
 button{
+    font-family: 'Roboto', sans-serif;
     border-radius: 5px;
     border-color: transparent;
-    margin: 10px 0 10px 0;
+    margin: 5px 30px 5px 30px;
 
     cursor: pointer;
+
+    transition: 1s;
+}
+button:hover
+{
+    background-color: lightblue;
 }
 
 #Themes{
@@ -20,6 +36,10 @@ button{
 }
 
 .Card{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap ;
+    justify-content: center;
 
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;

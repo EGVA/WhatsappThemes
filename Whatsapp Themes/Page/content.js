@@ -5,10 +5,10 @@
         
 
     function UpdatethemeFile(themeFile){          
-        setProp('--background-default', themeFile.Header.backgroundColor) // Backgorund color of the chatlist and some other things
-        setProp('--background-default-active', themeFile.Header.backgroundColorHover) //  Backgorund color of the chatlist and some other things while selected
-        setProp('--background-default-hover', themeFile.Header.backgroundColorActive) //  Backgorund color of the chatlist and some other things while hover
-        setProp('--panel-background-lighter', themeFile.Header.backgroundColorLighter) //  Backgorund color of the chatlist and some other things but lighter
+        setProp('--background-default', themeFile.Chatlist.backgroundColor) // Backgorund color of the chatlist and some other things
+        setProp('--background-default-active', themeFile.Global.backgroundColorHover) //  Backgorund color of the chatlist and some other things while selected
+        setProp('--background-default-hover', themeFile.Global.backgroundColorActive) //  Backgorund color of the chatlist and some other things while hover
+        setProp('--panel-background-lighter', themeFile.Chatlist.backgroundColorLighter) //  Backgorund color of the chatlist and some other things but lighter
         
         setProp('--dropdown-background', themeFile.Global.dropdownsBackground) // Dropdown menus background
         setProp('--dropdown-background-hover', themeFile.Global.dropdownsBackgroundHover) // Dropdown menus background
@@ -27,11 +27,12 @@
         //#endregion
     
         //#region header
-        setProp('--panel-header-background', themeFile.Menus.panelBackground) // Header background color 
-        setProp('--panel-header-icon', themeFile.Menus.icons) // The icons of the header
+        setProp('--panel-header-background', themeFile.Header.backgroundColor) // Header background color 
+        setProp('--panel-header-icon', themeFile.Header.icon) // The icons of the header
         //#endregion
     
         //#region Chatlist
+        setProp('--search-input-background', themeFile.Chatlist.searchBackground)
         setProp('--icon-lighter', themeFile.Chatlist.icons) // Mute icon
         setProp('--secondary-lighter', themeFile.Chatlist.Fonts.secondaryLighter) 
         setProp('--chatlist-icon', themeFile.Chatlist.icons) // Some preview message icons
@@ -56,12 +57,11 @@
         setProp('--outgoing-background', themeFile.Chat.outgoing.messageBackground); // Message background
         setProp('--outgoing-background-deeper', themeFile.Chat.outgoing.messageDeeper); // The reply background
         setProp('--outgoing-background-rgb', themeFile.Chat.outgoing.messageRGB); // IDK
-        setProp('--outgoing-primary', themeFile.Chat.outgoing.font); // Font
     
         setProp('--incoming-background', themeFile.Chat.incoming.messageBackground);  // Message background
         setProp('--incoming-background-deeper', themeFile.Chat.incoming.messageDeeper); // A deeper background colour
         setProp('--incoming-background-rgb', themeFile.Chat.incoming.messageRGB); // IDK
-        setProp('--incoming-primary', themeFile.Chat.incoming.font); // Font
+        setProp('--message-primary', themeFile.Chat.font); // Font
         
     
         setProp('--audio-progress-played', themeFile.Chat.audioProgressIndicator); // Audio progress icon indicator

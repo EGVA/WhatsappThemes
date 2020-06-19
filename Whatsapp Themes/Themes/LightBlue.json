@@ -1,0 +1,78 @@
+{
+    "Global": {
+            "dropdownsBackground": "#74A9FF",
+            "dropdownsText": "black",
+            "dropdownsBackgroundHover": "#99C0FF",
+            "backgroundColorHover": "#85B4FF",
+            "backgroundColorActive": "#85B4FF",
+            "Fonts": {
+                "primaryTitle": "black",
+                "primaryStrong": "black",
+                "primaryStronger": "black",
+                "secondary": "black",
+                "secondaryStrong": "black",
+                "secondaryStronger": "black"
+            }
+        },
+    "Intro": {
+            "background": "white"
+        },
+     "Header": {
+         "backgroundColor": "#74A9FF",
+         "backgroundColorLighter": "#85B4FF",
+         "icon": "black"
+     },
+     "Chatlist": {
+         "butterbar": {
+            "background": "#85B4FF",
+            "primary": "black",
+            "secondary": "black",
+            "icons": "black"
+         },
+         "Fonts": {
+             "secondaryLighter": "black"
+         },
+        "searchBackground": "white",
+        "backgroundColor": "#74A9FF",
+        "unreadMessageCounterBackground": "#A1FF8E",
+        "unreadMessageCounterText":       "black",
+        "icons": "black"
+     },
+     "Menus": {
+         "panelBackground": "#478EFF",
+         "drawerBackground": "#74A9FF",
+         "drawerSection": "#74A9FF",
+         "icons": "black",
+         "primary": "black"
+     },
+     "Chat": {
+         "outgoing":{
+             "messageBackground": "#A1FF8E",
+             "messageDeeper": "#88FF70",
+             "messageRGB": "#ffffff"
+             
+         },
+         "incoming":{
+            "messageBackground": "#ffffff",
+            "messageDeeper": "lightgray",
+            "messageRGB": "#ffffff"
+        },
+        "font": "black",
+        "input":{
+            "icons": "black",
+            "placeholder": "black",
+            "compose": "#74A9FF",
+            "richTextPanelBackground": "#66a1ff",
+            "backgroundDeep": "#1a71ff"
+        },
+        "icons": "#191919",
+        "messageTime": "#191919",
+        "playbackButtons": "black",
+        "audioProgressIndicator": "#191919",
+        "audioProgressIndicatorWhileAudioPlaying": "black",
+        "dayIndicatorBackground": "#A1FF8E",
+        "dayIndicatorText": "black",
+        "checkmarkNotVizualised": "#ffffff",
+        "checkmarkVisualized": "#745CFF"
+     }
+    }
